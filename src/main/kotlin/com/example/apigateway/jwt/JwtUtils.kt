@@ -31,6 +31,7 @@ object JwtUtils {
                 .withClaim("email", jwtClaim.email)
                 .withClaim("userId", jwtClaim.userId)
                 .withClaim("username", jwtClaim.username)
+                .withClaim("role", jwtClaim.role)
                 .sign(Algorithm.HMAC256(secret))
         }
 
